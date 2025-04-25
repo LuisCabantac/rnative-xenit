@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { CurrencyProvider } from "./store/context/CurrencyProvider";
 
 import HeaderText from "./components/HeaderText";
+import InputBox from "./components/InputBox";
 import Results from "./components/Results";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
       <StatusBar style="light" />
       <CurrencyProvider>
       <HeaderText />
+        <InputBox />
         <Results />
       </CurrencyProvider>
     </View>
