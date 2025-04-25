@@ -21,8 +21,8 @@ export default function App() {
       <StatusBar style="light" />
       <CurrencyProvider>
         <HeaderText />
-        <View style={styles.separator}></View>
         <InputBox />
+        <View style={styles.separator}></View>
         <Results />
       </CurrencyProvider>
     </View>
