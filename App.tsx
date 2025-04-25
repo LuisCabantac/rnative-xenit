@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 import HeaderText from "./components/HeaderText";
+import Results from "./components/Results";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -16,6 +17,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="light" />
       <HeaderText />
+        <Results />
     </View>
   );
 }
