@@ -21,6 +21,7 @@ export default function App() {
       <StatusBar style="light" />
       <CurrencyProvider>
       <HeaderText />
+        <View style={styles.separator}></View>
         <InputBox />
         <Results />
       </CurrencyProvider>
@@ -35,5 +36,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 40,
     paddingVertical: 80,
+    gap: 12,
+  },
+  separator: {
+    borderTopWidth: 1,
+    borderColor: "#343a40",
+    marginTop: 8,
   },
 });
