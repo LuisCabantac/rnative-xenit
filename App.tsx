@@ -1,4 +1,8 @@
 import { useFonts } from "expo-font";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+
+import HeaderText from "./components/HeaderText";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -10,8 +14,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
+      <HeaderText />
     </View>
   );
 }
@@ -19,8 +23,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#212529",
+    justifyContent: "center",
+    paddingHorizontal: 40,
+    paddingVertical: 80,
   },
 });
