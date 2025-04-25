@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function HeaderText() {
   return (
-    <>
+    <View>
       <View style={styles.logoContainer}>
         <Image
           source={require("../assets/icon.png")}
@@ -11,7 +11,7 @@ export default function HeaderText() {
         <Text style={styles.logoText}>Xenit</Text>
       </View>
       <Text style={styles.conversionText}>EUR to USD conversion</Text>
-    </>
+    </View>
   );
 }
 
