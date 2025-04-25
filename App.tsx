@@ -20,7 +20,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="light" />
       <CurrencyProvider>
-      <HeaderText />
+        <HeaderText />
         <View style={styles.separator}></View>
         <InputBox />
         <Results />
