@@ -2,6 +2,8 @@ import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
+import { CurrencyProvider } from "./store/context/CurrencyProvider";
+
 import HeaderText from "./components/HeaderText";
 import Results from "./components/Results";
 
@@ -16,8 +18,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
+      <CurrencyProvider>
       <HeaderText />
         <Results />
+      </CurrencyProvider>
     </View>
   );
 }
