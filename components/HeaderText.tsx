@@ -1,5 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
+import { Colors } from "../utils/Colors";
+
 export default function HeaderText() {
   return (
     <View>
@@ -23,12 +25,12 @@ const styles = StyleSheet.create({
   },
   logoText: {
     fontFamily: "PlusJakartaSans-Bold",
-    color: "#f8f9fa",
+    color: Colors.textColor,
     fontSize: 30,
   },
   conversionText: {
     fontFamily: "PlusJakartaSans-Bold",
-    color: "#f8f9fa",
+    color: Colors.textColor,
     fontSize: 24,
   },
   logoImage: {

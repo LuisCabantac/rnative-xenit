@@ -2,6 +2,7 @@ import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
+import { Colors } from "./utils/Colors";
 import { CurrencyProvider } from "./store/context/CurrencyProvider";
 
 import HeaderText from "./components/HeaderText";
@@ -35,7 +36,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#212529",
+    backgroundColor: Colors.backgroundColor,
     justifyContent: "center",
     paddingHorizontal: 40,
     paddingVertical: 80,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     borderTopWidth: 1,
-    borderColor: "#343a40",
+    borderColor: Colors.borderColor,
     marginTop: 8,
   },
 });

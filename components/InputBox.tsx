@@ -1,5 +1,6 @@
 import { StyleSheet, TextInput, View } from "react-native";
 
+import { Colors } from "../utils/Colors";
 import { useCurrency } from "../store/context/CurrencyProvider";
 
 import Label from "./Label";
@@ -27,12 +28,12 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   input: {
-    borderColor: "#343a40",
+    borderColor: Colors.borderColor,
+    color: Colors.textColor,
+    fontFamily: "PlusJakartaSans-Regular",
     borderWidth: 1,
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingBottom: 14,
-    fontFamily: "PlusJakartaSans-Regular",
-    color: "#f8f9fa",
   },
 });

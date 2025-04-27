@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { Colors } from "../utils/Colors";
 import { useCurrency } from "../store/context/CurrencyProvider";
 
 export default function Results() {
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
     padding: 16,
     borderWidth: 1,
     borderRadius: 12,
-    borderColor: "#343a40",
-    backgroundColor: "#24292d",
+    borderColor: Colors.borderColor,
+    backgroundColor: Colors.secondaryBackgroundColor,
   },
   textPrimary: {
     color: "#f1f3f5",
@@ -44,6 +45,6 @@ const styles = StyleSheet.create({
   },
   separator: {
     borderTopWidth: 1,
-    borderTopColor: "#343a40",
+    borderTopColor: Colors.borderColor,
   },
 });
