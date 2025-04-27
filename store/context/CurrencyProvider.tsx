@@ -16,7 +16,7 @@ interface ICurrencyContext {
   error: string;
   symbolFrom: string;
   symbolTo: string;
-  choices: { id: string; value: string; text: string }[];
+  choices: { value: string; label: string }[];
   dispatch: Dispatch<IAction>;
 }
 
@@ -95,37 +95,37 @@ function CurrencyProvider({ children }: { children: React.ReactNode }) {
   ] = useReducer(reducer, initialValue);
 
   const choices = [
-    { id: "AU", value: "AUD", text: "Australian Dollar" },
-    { id: "BG", value: "BGN", text: "Bulgarian Lev" },
-    { id: "BR", value: "BRL", text: "Brazilian Real" },
-    { id: "CA", value: "CAD", text: "Canadian Dollar" },
-    { id: "CH", value: "CHF", text: "Swiss Franc" },
-    { id: "CN", value: "CNY", text: "Chinese Renminbi Yuan" },
-    { id: "CZ", value: "CZK", text: "Czech Koruna" },
-    { id: "DK", value: "DKK", text: "Danish Krone" },
-    { id: "EU", value: "EUR", text: "Euro" },
-    { id: "GB", value: "GBP", text: "British Pound" },
-    { id: "HK", value: "HKD", text: "Hong Kong Dollar" },
-    { id: "HU", value: "HUF", text: "Hungarian Forint" },
-    { id: "ID", value: "IDR", text: "Indonesian Rupiah" },
-    { id: "IL", value: "ILS", text: "Israeli New Sheqel" },
-    { id: "IN", value: "INR", text: "Indian Rupee" },
-    { id: "IS", value: "ISK", text: "Icelandic Króna" },
-    { id: "JP", value: "JPY", text: "Japanese Yen" },
-    { id: "KR", value: "KRW", text: "South Korean Won" },
-    { id: "MX", value: "MXN", text: "Mexican Peso" },
-    { id: "MY", value: "MYR", text: "Malaysian Ringgit" },
-    { id: "NO", value: "NOK", text: "Norwegian Krone" },
-    { id: "NZ", value: "NZD", text: "New Zealand Dollar" },
-    { id: "PH", value: "PHP", text: "Philippine Peso" },
-    { id: "PL", value: "PLN", text: "Polish Złoty" },
-    { id: "RO", value: "RON", text: "Romanian Leu" },
-    { id: "SE", value: "SEK", text: "Swedish Krona" },
-    { id: "SG", value: "SGD", text: "Singapore Dollar" },
-    { id: "TH", value: "THB", text: "Thai Baht" },
-    { id: "TR", value: "TRY", text: "Turkish Lira" },
-    { id: "US", value: "USD", text: "United States Dollar" },
-    { id: "ZA", value: "ZAR", text: "South African Rand" },
+    { value: "AUD", label: "Australian Dollar" },
+    { value: "BGN", label: "Bulgarian Lev" },
+    { value: "BRL", label: "Brazilian Real" },
+    { value: "CAD", label: "Canadian Dollar" },
+    { value: "CHF", label: "Swiss Franc" },
+    { value: "CNY", label: "Chinese Renminbi Yuan" },
+    { value: "CZK", label: "Czech Koruna" },
+    { value: "DKK", label: "Danish Krone" },
+    { value: "EUR", label: "Euro" },
+    { value: "GBP", label: "British Pound" },
+    { value: "HKD", label: "Hong Kong Dollar" },
+    { value: "HUF", label: "Hungarian Forint" },
+    { value: "IDR", label: "Indonesian Rupiah" },
+    { value: "ILS", label: "Israeli New Sheqel" },
+    { value: "INR", label: "Indian Rupee" },
+    { value: "ISK", label: "Icelandic Króna" },
+    { value: "JPY", label: "Japanese Yen" },
+    { value: "KRW", label: "South Korean Won" },
+    { value: "MXN", label: "Mexican Peso" },
+    { value: "MYR", label: "Malaysian Ringgit" },
+    { value: "NOK", label: "Norwegian Krone" },
+    { value: "NZD", label: "New Zealand Dollar" },
+    { value: "PHP", label: "Philippine Peso" },
+    { value: "PLN", label: "Polish Złoty" },
+    { value: "RON", label: "Romanian Leu" },
+    { value: "SEK", label: "Swedish Krona" },
+    { value: "SGD", label: "Singapore Dollar" },
+    { value: "THB", label: "Thai Baht" },
+    { value: "TRY", label: "Turkish Lira" },
+    { value: "USD", label: "United States Dollar" },
+    { value: "ZAR", label: "South African Rand" },
   ];
 
   async function getJSON(url: string) {
