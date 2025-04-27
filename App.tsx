@@ -7,6 +7,7 @@ import { CurrencyProvider } from "./store/context/CurrencyProvider";
 import HeaderText from "./components/HeaderText";
 import InputBox from "./components/InputBox";
 import Results from "./components/Results";
+import Select from "./components/Select";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -22,7 +23,9 @@ export default function App() {
       <CurrencyProvider>
         <HeaderText />
         <InputBox />
+        <Select choiceType="choiceOne" />
         <View style={styles.separator}></View>
+        <Select choiceType="choiceTwo" />
         <Results />
       </CurrencyProvider>
     </View>
