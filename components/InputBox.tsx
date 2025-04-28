@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     fontFamily: "PlusJakartaSans-Regular",
     borderWidth: 1,
     borderRadius: 8,
-    paddingHorizontal: 14,
-    paddingBottom: 14,
+    padding: 14,
   },
 });
