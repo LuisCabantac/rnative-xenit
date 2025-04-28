@@ -4,10 +4,10 @@ import { Colors } from "../utils/Colors";
 
 export default function HeaderText() {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image
-          source={require("../assets/icon.png")}
+          source={require("../assets/logo.png")}
           style={styles.logoImage}
         />
         <Text style={styles.logoText}>Xenit</Text>
@@ -18,10 +18,12 @@ export default function HeaderText() {
 }
 
 const styles = StyleSheet.create({
+  container: { width: "100%" },
   logoContainer: {
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
+    width: "100%",
   },
   logoText: {
     fontFamily: "PlusJakartaSans-Bold",
