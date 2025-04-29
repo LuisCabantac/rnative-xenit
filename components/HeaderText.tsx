@@ -1,8 +1,12 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
 import { Colors } from "../utils/Colors";
+import { useCurrency } from "../store/context/CurrencyProvider";
 
 export default function HeaderText() {
+  const { error, choiceFrom, choiceTo } = useCurrency();
+  const message = `${choiceFrom} to ${choiceTo} conversion`;
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -12,7 +16,8 @@ export default function HeaderText() {
         />
         <Text style={styles.logoText}>Xenit</Text>
       </View>
-      <Text style={styles.conversionText}>EUR to USD conversion</Text>
+        {error ? error : message ? message : "Currency converter"}
+      </Text>
     </View>
   );
 }
