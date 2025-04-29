@@ -31,16 +31,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-    width: "100%",
   },
   logoText: {
     fontFamily: "PlusJakartaSans-Bold",
     color: Colors.textColor,
-    fontSize: 30,
+    fontSize: 28,
   },
   conversionText: {
     fontFamily: "PlusJakartaSans-Bold",
     color: Colors.textColor,
+    fontSize: 22,
   },
   conversionTextError: {
     color: Colors.errorTextColor,
