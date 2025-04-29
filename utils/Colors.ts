@@ -4,4 +4,5 @@ export const Colors = {
   borderColor: "#343a40",
   backgroundColor: "#212529",
   secondaryBackgroundColor: "#24292d",
+  errorTextColor: "#ff8787",
 };

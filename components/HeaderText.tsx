@@ -16,6 +16,9 @@ export default function HeaderText() {
         />
         <Text style={styles.logoText}>Xenit</Text>
       </View>
+      <Text
+        style={[styles.conversionText, error && styles.conversionTextError]}
+      >
         {error ? error : message ? message : "Currency converter"}
       </Text>
     </View>
@@ -38,7 +41,9 @@ const styles = StyleSheet.create({
   conversionText: {
     fontFamily: "PlusJakartaSans-Bold",
     color: Colors.textColor,
-    fontSize: 24,
+  },
+  conversionTextError: {
+    color: Colors.errorTextColor,
   },
   logoImage: {
     width: 26,
