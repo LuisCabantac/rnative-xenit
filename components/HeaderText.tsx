@@ -4,7 +4,7 @@ import { Colors } from "../utils/Colors";
 import { useCurrency } from "../store/context/CurrencyProvider";
 
 export default function HeaderText() {
-  const { error, choiceFrom, choiceTo } = useCurrency();
+  const { choiceFrom, choiceTo } = useCurrency();
   const message = `${choiceFrom} to ${choiceTo} conversion`;
 
   return (
@@ -16,10 +16,8 @@ export default function HeaderText() {
         />
         <Text style={styles.logoText}>Xenit</Text>
       </View>
-      <Text
-        style={[styles.conversionText, error && styles.conversionTextError]}
-      >
-        {error ? error : message ? message : "Currency converter"}
+      <Text style={styles.conversionText}>
+        {message ? message : "Currency converter"}
       </Text>
     </View>
   );
@@ -30,7 +28,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
+    gap: 6,
   },
   logoText: {
     fontFamily: "PlusJakartaSans-Bold",
